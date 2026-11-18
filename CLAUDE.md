@@ -24,4 +24,6 @@ Roblox experience built with AI help. Code lives in this repo as Luau files. **L
 ## Roblox Studio MCP
 - `.mcp.json` registers `roblox-studio`, which is Studio's built-in MCP server (`%LOCALAPPDATA%\Roblox\mcp.bat`). Studio must be open with MCP turned on.
 - Use it to inspect the live DataModel (`search_game_tree`, `inspect_instance`), run Luau (`execute_luau`), playtest (`start_stop_play`, `get_console_output`), and take screenshots (`screen_capture`).
+- Keep `.mcp.json` valid JSON: backslashes in the bat path must be doubled (`\\`). A single `\R` makes Claude Code silently skip the server.
+- `execute_luau` needs `datamodel_type` (`"Edit"` normally, or the play DataModel during a playtest). If a call says "No Roblox Studio instances are connected" right after the server starts, wait a few seconds and retry; check with `list_roblox_studios`.
 - **Source of truth for scripts is this repo.** Edit the files here and let Lync sync them. Do not edit synced scripts through MCP, because Lync would overwrite those edits. Use MCP for building and parts, testing, and inspecting. Save the place with `save_place` after world edits.
