@@ -10,8 +10,10 @@ Roblox experience built with AI help. Code lives in this repo as Luau files. **L
 - The Studio place file is `../Place1.rbxl`, outside the repo. It is not tracked.
 
 ## File naming (Lync)
-- `Name.server.luau` → Script, `Name.client.luau` → LocalScript, `Name.luau` → ModuleScript.
-- A folder becomes a Folder. `init.*` files need a `--@script` / `--@localscript` directive on line 1, so use named files instead.
+- All code files are `Name.luau`. Lync picks the script type from a directive on line 1, not from the file name (`.server.luau` / `.client.luau` are rejected):
+  - `--@script:server` → Script (server), `--@script:client` → Script with Client run context, `--@localscript` → LocalScript, no directive → ModuleScript.
+  - `--@disabled` on its own line disables a script.
+- A folder becomes a Folder.
 - Use `.luau`, tabs, and double quotes. Run `stylua src` and `selene src` before committing.
 
 ## Tooling
