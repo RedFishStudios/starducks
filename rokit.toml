@@ -1,0 +1,8 @@
+# Toolchain for this project, managed by Rokit (https://github.com/rojo-rbx/rokit)
+# Run `rokit install` after cloning.
+
+[tools]
+lync = "Iron-Stag-Games/Lync@0.30.14"
+selene = "Kampfkarren/selene@0.32.0"
+stylua = "JohnnyMorganz/StyLua@2.6.0"
+luau-lsp = "JohnnyMorganz/luau-lsp@1.70.1"

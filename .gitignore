@@ -1,0 +1,22 @@
+# Lync / tooling output
+sourcemap.json
+roblox.yml
+*.rbxl.lock
+*.rbxlx.lock
+
+# Studio place files live outside the repo (../Place1.rbxl); ignore any stray ones
+*.rbxl
+*.rbxlx
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Node
+node_modules/
+
+# Claude Code local settings
+.claude/settings.local.json

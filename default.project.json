@@ -1,0 +1,31 @@
+{
+	"name": "Starducks",
+	"port": 34873,
+	"experienceId": 0,
+	"placeId": 0,
+	"globIgnorePaths": ["**/*.spec.luau"],
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"Shared": {
+				"$path": "src/shared"
+			}
+		},
+		"ServerScriptService": {
+			"$className": "ServerScriptService",
+			"Server": {
+				"$path": "src/server"
+			}
+		},
+		"StarterPlayer": {
+			"$className": "StarterPlayer",
+			"StarterPlayerScripts": {
+				"$className": "StarterPlayerScripts",
+				"Client": {
+					"$path": "src/client"
+				}
+			}
+		}
+	}
+}
